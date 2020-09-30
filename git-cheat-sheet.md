@@ -1,6 +1,6 @@
 ### Choose your language / Escoge tu idioma
-[English](#git-cheat-sheet-(en))
-[Español](#git-cheat-sheet-(es))
+* [English](#git-cheat-sheet-en)
+* [Español](#git-cheat-sheet-en)
 
 <!--
 ### Symbols / Convenciones
