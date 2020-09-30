@@ -44,9 +44,9 @@ Initialize the current directory as a git repository.
 	 
 **More info:** `git init` creates the directory (.git), all the subdirectories and files required for it to work. In case of running `git init` in a existing repository, it will not overwrite things that are already there. [Documentation.](https://git-scm.com/docs/git-init)
 #### Don't forget
-README.md
-.gitignore
-License
+* README.md
+* .gitignore
+* License
 
 
 # Git Cheat Sheet (Es)
@@ -58,6 +58,6 @@ Inicializar el directorio actual como un repositorio de git.
 
 **Más información:** `git init` crea el directorio (.git), todos los subdirectorios y archivos necesarios por este para funcionar. En caso de ejecutar `git init` en un repositorio existente, no se sobreescribirán las cosas que ya estén allí. [Documentación.](https://git-scm.com/docs/git-init)
 #### Don't forget
-README.md
-.gitignore
-License
+* README.md
+* .gitignore
+* License
