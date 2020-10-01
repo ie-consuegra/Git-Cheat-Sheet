@@ -20,20 +20,27 @@
 |`git commit -am "Commit message"`|It is like running `git add .` and `git commit -m ...` at the same time|
 |`git reset HEAD`||
 |**Get information**||
+|`git config --list`||
 |`git status`||
 |`git branch`|List branches. The current branch will be highlighted and marked with an asterisk|
-|`git log --stat`||
-|`git show`|See the changes|
-|`git config --list`||
-|**Create/Delete branches**||
+|`git log <path>`|Show commit logs (commit id, author, date and message), the "history", of the specified file or directory|
+|`git log --stat`|Show commit logs and how much it changed in each one|
+|`git log --all --decorate --oneline --graph`|Show a simplified tree of logs ⭐|
+|`git show`|Show the commit logs and what changed in each one (diff)|
+|`git diff <commit A> <commit B>`|Show the differences between two commits (no need to write the whole commit id, the first 4 letters are ok) If just one commit is written, it compares it with the last one, the HEAD|
+
+## Branches
+|Git commands |Description|
+|--|--|
+|**Create/Delete**||
 |`git branch < branch >`|Creates a branch called branch|
 |`git branch -d < branch >`|Deletes the branch called branch|
-|**Switch branches**||
+|**Switch**||
 |`git checkout < branch >`|The "classic" way to switch to other branch|
 |`git switch < branch >`|Added in Git 2.23, switch provides a clearer and simpler command to do this|
 |`git switch -c < branch >`|Creates a new branch and switches to it|
 |`git switch -`|Switch back to the last checked branch|
-|``|...To be continued|
+|``||
 
 
 ## Basics
@@ -47,6 +54,12 @@ Initialize the current directory as a git repository.
 * README.md
 * .gitignore
 * License
+
+### Remember how to show a graph of branches
+Command: `git log --all --decorate --oneline --graph`
+
+**Mnemonics**
+🐕 A dog = git log --**a**ll --**d**ecorate --**o**neline --**g**raph
 
 
 # Git Cheat Sheet (Es)
