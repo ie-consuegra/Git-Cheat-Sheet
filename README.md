@@ -37,7 +37,7 @@
 |`git branch -d < branch >`|Deletes the branch called branch|
 |**Switch**||
 |`git checkout < branch >`|The "classic" way to switch to other branch|
-|`git switch < branch >`|Added in Git 2.23, switch provides a clearer and simpler command to do this|
+|`git switch < branch >`|Added in Git 2.23, switch provides a clearer and sleek command to do this|
 |`git switch -c < branch >`|Creates a new branch and switches to it|
 |`git switch -`|Switch back to the last checked branch|
 |``||
