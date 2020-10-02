@@ -22,7 +22,7 @@
 |**Get information**||
 |`git config --list`|List all variables set in config file|
 |`git status`|Show the working tree status ("changes not staged", "changes to be committed" (staged), "nothing to commit" ...)|
-|`git branch`|List branches. The current branch will be highlighted and marked with an asterisk|
+|`git branch`|List branches. The current branch will be highlighted and marked with an asterisk. Add `-r` to show remote branches or `-a` to show them all|
 |`git log <path>`|Show commit logs (commit id, author, date and message), the "history", of the specified file or directory|
 |`git log --stat`|Show commit logs and how much it changed in each one|
 |`git log --all --decorate --oneline --graph`|Show a simplified tree of logs ⭐|
@@ -40,6 +40,9 @@
 |`git switch <branch>`|Added in Git 2.23, switch provides a clearer and sleek command to do this|
 |`git switch -c <branch>`|Creates a new branch and switches to it|
 |`git switch -`|Switch back to the last checked branch|
+|**Merge and Rebase**||
+|`git merge <branch>`|Merge the specified branch with the current one. The current branch has priority|
+|`git rebase <branch>`||
 
 ## Remote repositories
 |Git commands |Description|
@@ -61,6 +64,27 @@
 |`git tag -d <tag>`|Delete tag|
 |`git push <name> --tags`|Add the local tags to the remote repository|
 |`git push <name> :refs/tags/<tag>`|Delete the specified tag in the remote repository|
+
+## Additional options
+|Git commands |Description|
+|--|--|
+|`git stash`||
+|`git stash list`||
+|`git stash pop <stash>`||
+|`git stash branch <branch>`||
+|`git stash drop <stash>`||
+|`git clean`||
+|`git clean --dry-run`||
+|`git clean -f`||
+|`git cherry-pick <commit>`||
+|`git commit-ammend`||
+
+## Search in files and commits
+|Git commands |Description|
+|--|--|
+|`git grep <word>`|Search the specified word in the repository files. It is case sensitive. Add `-n` to show the line where the word appears, `-c` to show how many times it appears|
+|`git log -S "word"`|Search the specified word in the repository's history.|
+
 
 ## Basics
 ### Start
