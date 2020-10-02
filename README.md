@@ -79,12 +79,23 @@
 |`git cherry-pick <commit>`||
 |`git commit-ammend`||
 
-## Search in files and commits
+## Search in files and commits, find authors
 |Git commands |Description|
 |--|--|
 |`git grep <word>`|Search the specified word in the repository files. It is case sensitive. Add `-n` to show the line where the word appears, `-c` to show how many times it appears|
 |`git log -S "word"`|Search the specified word in the repository's history.|
+|`git blame <file>`|Show the author of each line of code of the specified file: Commit id, file name, Author, timestamp of last change, line, line content.|
+|`git blame -L<line>,<line> <file>`|Show the author of the specified lines after `-L`. i.e. `git blame -L45,50 README.md` shows the author of the lines 45 to 50 of the README file|
 
+## Reset and rm
+|Git commands |Description|
+|--|--|
+|`git reset`||
+|`git reset --hard`||
+|`git reset <commit>`||
+|`git reset --soft`||
+|`git reset rm --cached`||
+|`git reset rm --force`||
 
 ## Basics
 ### Start
