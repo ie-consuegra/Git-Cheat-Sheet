@@ -50,13 +50,13 @@
 |`git push <name> <branch>`|Update the branch of the remote repo based on the local one|
 |`git push -u <name> <branch>`|The same as above. But, set up tracking. So, you can run `git pull` after that, without specifying name nor branch|
 |`git pull <name> <branch>`|Update the branch of the local repo based on the remote one|
-|`git pull <name> <branch> --allow-unrelated-histories`|Pull even when the projects mismatch commit histories. Useful when you just created a remote repo and added at least one commit, as both, local and remote repos are now unrelated, you need to "allow unrelated histories"|
+|`git pull <name> <branch> --allow-unrelated-histories`|Pull even when the projects mismatch commit histories. Useful when you just created a remote repo and added at least one commit, as local and remote repos are now unrelated, you need to "allow unrelated histories"|
 
 ## Tags
 |Git commands |Description|
 |--|--|
 |`git tag`|List all tags|
-|`git show-ref --tags`|List tags and their ids|
+|`git show-ref --tags`|List tags and their commit ids|
 |`git tag -a <tag> -m "Message" <commit>`|Add a tag to the specified commit|
 |`git tag -d <tag>`|Delete tag|
 |`git push <name> --tags`|Add the local tags to the remote repository|
@@ -82,6 +82,9 @@ Command: `git log --all --decorate --oneline --graph`
 
 
 # Git Cheat Sheet (Es)
+
+*Tan pronto se termine el cheat sheet en inglés, estará disponible en español.*
+
 ## Básico
 ### Para iniciar
 Inicializar el directorio actual como un repositorio de git.
