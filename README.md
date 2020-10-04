@@ -122,20 +122,20 @@ Command: `git log --all --decorate --oneline --graph`
 |--|--|
 |**Iniciar con git**||
 |`git init`| Inicializa el directorio actual como un repositorio de git|
-|`git add`| *add: Añadir, agregar* Actualiza el índice usando el contenido del directorio o archivos especificados, preparándolos para el siguiente commit. p. ej. `git add assets` añade todos los archivos del directorio assets|
+|`git add`| *(add: Añadir, agregar)* Actualiza el índice usando el contenido del directorio o archivos especificados, preparándolos para el siguiente commit. p. ej. `git add assets` añade todos los archivos del directorio assets|
 |`git add .`| Añade todos los archivos, directorios y subdirectorios del directorio actual|
-|`git commit -m "Mensaje del commit"` |*commit: Comprometer* Crea un nuevo commit (graba los cambios al repositorio). Si el flag `-m` no se incluye, se lanza un editor de texto para definir el mensaje del commit|
+|`git commit -m "Mensaje del commit"` |*(commit: Comprometer)* Crea un nuevo commit (graba los cambios al repositorio). Si el flag `-m` no se incluye, se lanza un editor de texto para definir el mensaje del commit|
 |`git commit -am "Mensaje del commit"`| Equivalente a ejecutar `git add .` y `git commit -m ...` al mismo tiempo|
 |`git reset HEAD`||
 |**Obtener información**||
 |`git config --list`|Muestra una lista de todas las variables establecidas en el archivo config|
 |`git status`|Muestra el estado del árbol de trabajo ("changes not staged", "changes to be committed" (staged), "nothing to commit" ...)|
 |`git branch`|Muestra una lista de las ramas. La rama actual se resalta y marca con un asterisco. Añade `-r` para mostrar las ramas remotas o `-a` para mostrarlas todas|
-|`git log <path>`|*log: Bitácora* Muestra el historial de commits (id del commit, autor, fecha y mensaje), del archivo o directorio especificado|
+|`git log <path>`|*(log: Bitácora)* Muestra el historial de commits (id del commit, autor, fecha y mensaje), del archivo o directorio especificado|
 |`git log --stat`|Muestra el historial de commits y cuanto cambió en cada uno|
 |`git log --all --decorate --oneline --graph`|Muestra un árbol simplificado de logs (historial de commits) ⭐|
-|`git show`|*show: Mostrar* Muestra el historial de commits y que cambió en cada uno (diff)|
-|`git diff <commit A> <commit B>`|*diff: de difference: diferencia* Muestra las diferencias entre dos commits (no es necesario escribir todo el id del commit, las 4 primeras letras están bien) Si solo se escribe un commit, lo compara con el último (HEAD)|
+|`git show`|*(show: Mostrar)* Muestra el historial de commits y que cambió en cada uno (diff)|
+|`git diff <commit A> <commit B>`|*(diff: de difference: diferencia)* Muestra las diferencias entre dos commits (no es necesario escribir todo el id del commit, las 4 primeras letras están bien) Si solo se escribe un commit, lo compara con el último (HEAD)|
 <!--
 ## Ramas
 |Git commands |Description|
