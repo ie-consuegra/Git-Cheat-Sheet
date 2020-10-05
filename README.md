@@ -33,8 +33,8 @@
 |Git commands |Description|
 |--|--|
 |**Create/Delete**||
-|`git branch <branch>`|Creates a branch called branch|
-|`git branch -d <branch>`|Deletes the branch called branch|
+|`git branch <branch>`|Creates the specified branch|
+|`git branch -d <branch>`|Deletes the specified branch|
 |**Switch**||
 |`git checkout <branch>`|The "classic" way to switch to other branch|
 |`git switch <branch>`|Added in Git 2.23, switch provides a clearer and sleek command to do this|
@@ -49,9 +49,9 @@
 |--|--|
 |`git clone <url>`|Clone a remote repository into the current directory|
 |`git remote`|Show the remote repositories (by name). Add the flag `-v` to see the urls too|
-|`git remote add <name> <url>`|Create a new connection to a remote repository. This will be called by the specified name (generally, "origin")|
+|`git remote add <name> <url>`|Create a new connection to a remote repository. This will be called by the specified name (generally called, "origin" and "upstream")|
 |`git push <name> <branch>`|Update the branch of the remote repo based on the local one|
-|`git push -u <name> <branch>`|The same as above. But, set up tracking. So, you can run `git pull` after that, without specifying name nor branch|
+|`git push -u <name> <branch>`|The same as above. But, set up tracking. So, after running it, you can use `git pull` or `git push`, without specifying the name of the remote repo nor the branch|
 |`git pull <name> <branch>`|Update the branch of the local repo based on the remote one|
 |`git pull <name> <branch> --allow-unrelated-histories`|Pull even when the projects mismatch commit histories. Useful when you just created a remote repo and added at least one commit, as local and remote repos are now unrelated, you need to "allow unrelated histories"|
 
@@ -136,43 +136,43 @@ Command: `git log --all --decorate --oneline --graph`
 |`git log --all --decorate --oneline --graph`|Muestra un árbol simplificado de logs (historial de commits) ⭐|
 |`git show`|*(show: Mostrar)* Muestra el historial de commits y que cambió en cada uno (diff)|
 |`git diff <commit A> <commit B>`|*(diff: de difference: diferencia)* Muestra las diferencias entre dos commits (no es necesario escribir todo el id del commit, las 4 primeras letras están bien) Si solo se escribe un commit, lo compara con el último (HEAD)|
-<!--
+
 ## Ramas
-|Git commands |Description|
+|Comandos de git |Descripción|
 |--|--|
-|**Create/Delete**||
-|`git branch <branch>`|Creates a branch called branch|
-|`git branch -d <branch>`|Deletes the branch called branch|
+|**Crear/Eliminar**||
+|`git branch <branch>`|Crea la rama especificada|
+|`git branch -d <branch>`|Elimina la rama especificada|
 |**Switch**||
-|`git checkout <branch>`|The "classic" way to switch to other branch|
-|`git switch <branch>`|Added in Git 2.23, switch provides a clearer and sleek command to do this|
-|`git switch -c <branch>`|Creates a new branch and switches to it|
-|`git switch -`|Switch back to the last checked branch|
-|**Merge and Rebase**||
-|`git merge <branch>`|Merge the specified branch with the current one. The current branch has priority|
+|`git checkout <branch>`|La forma "Clásica" de cambiar a otra rama|
+|`git switch <branch>`|*(switch: Cambiar)* Añadido en Git 2.23, switch provee un comando más claro y elegante para hacer esto|
+|`git switch -c <branch>`|Crea una nueva rama y se cambia hacia esta|
+|`git switch -`|Se cambia de regreso a la rama donde se hallaba anteriormente|
+|**Merge y Rebase**||
+|`git merge <branch>`|*(merge: Fusionarse, combinarse)* Fusiona la rama especificada con la rama actual. La rama actual tiene prioridad|
 |`git rebase <branch>`||
 
-## Remote repositories
-|Git commands |Description|
+## Repositorios remotos
+|Comandos de git |Descripción|
 |--|--|
-|`git clone <url>`|Clone a remote repository into the current directory|
-|`git remote`|Show the remote repositories (by name). Add the flag `-v` to see the urls too|
-|`git remote add <name> <url>`|Create a new connection to a remote repository. This will be called by the specified name (generally, "origin")|
-|`git push <name> <branch>`|Update the branch of the remote repo based on the local one|
-|`git push -u <name> <branch>`|The same as above. But, set up tracking. So, you can run `git pull` after that, without specifying name nor branch|
-|`git pull <name> <branch>`|Update the branch of the local repo based on the remote one|
-|`git pull <name> <branch> --allow-unrelated-histories`|Pull even when the projects mismatch commit histories. Useful when you just created a remote repo and added at least one commit, as local and remote repos are now unrelated, you need to "allow unrelated histories"|
+|`git clone <url>`|Clona un repositorio remoto al directorio local|
+|`git remote`|Muestra los repositorios remotos (Por nombre). Añade la bandera `-v` para ver las urls también|
+|`git remote add <nombre> <url>`|Crea una nueva conexión a un repositorio remoto. Este será llamado por el nombre especificado ("origin" y "upstream" son nombres usuales)|
+|`git push <nombre> <rama>`|Actualiza la rama del repositorio remoto basado en el local|
+|`git push -u <nombre> <rama>`|Igual que el mencionado arriba. Sin embargo, establece una conexión o rastreo. Es decir, después de ejecutarlo podrás usar `git pull` o `git push`, sin especificar el nombre del repositorio remoto ni la rama|
+|`git pull <nombre> <rama>`|Actualiza la rama del repositorio local basado en el remoto|
+|`git pull <nombre> <rama> --allow-unrelated-histories`|Hace el "pull" aún cuando los proyectos no compartan la misma historia de commitos. Es útil cuando acabas de crear un repositorio remoto y has añadido al menos un commit, como los repositorios local y remoto no están relacionados, se necesita "evitar historias no relacionadas" *"allow unrelated histories"*|
 
 ## Tags
-|Git commands |Description|
+|Comandos de git |Descripción|
 |--|--|
-|`git tag`|List all tags|
-|`git show-ref --tags`|List tags and their commit ids|
-|`git tag -a <tag> -m "Message" <commit>`|Add a tag to the specified commit|
-|`git tag -d <tag>`|Delete tag|
-|`git push <name> --tags`|Add the local tags to the remote repository|
-|`git push <name> :refs/tags/<tag>`|Delete the specified tag in the remote repository|
-
+|`git tag`|Muestra la lista de tags|
+|`git show-ref --tags`|Muestra la lista de tags y sus id|
+|`git tag -a <tag> -m "Mensaje" <commit>`|Añade un tag al commit especificado|
+|`git tag -d <tag>`|Elimina el tag especificado|
+|`git push <nombre> --tags`|Añade los tags locales al repositorio remoto|
+|`git push <nombre> :refs/tags/<tag>`|Elimina el tag especificado del repositorio remoto|
+<!--
 ## Additional options
 |Git commands |Description|
 |--|--|
