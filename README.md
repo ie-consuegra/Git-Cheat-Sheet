@@ -83,8 +83,8 @@
 |Git commands |Description|
 |--|--|
 |`git grep <word>`|Search the specified word in the repository files. It is case sensitive. Add `-n` to show the line where the word appears, `-c` to show how many times it appears|
-|`git log -S "word"`|Search the specified word in the repository's history.|
-|`git blame <file>`|Show the author of each line of code of the specified file: Commit id, file name, Author, timestamp of last change, line, line content.|
+|`git log -S "word"`|Search the specified word in the repository's history|
+|`git blame <file>`|Show the author of each line of code of the specified file: Commit id, file name, Author, timestamp of last change, line, line content|
 |`git blame -L<line>,<line> <file>`|Show the author of the specified lines after `-L`. i.e. `git blame -L45,50 README.md` shows the author of the lines 45 to 50 of the README file|
 
 ## Reset and rm
@@ -161,7 +161,7 @@ Command: `git log --all --decorate --oneline --graph`
 |`git push <nombre> <rama>`|Actualiza la rama del repositorio remoto basado en el local|
 |`git push -u <nombre> <rama>`|Igual que el mencionado arriba. Sin embargo, establece una conexión o rastreo. Es decir, después de ejecutarlo podrás usar `git pull` o `git push`, sin especificar el nombre del repositorio remoto ni la rama|
 |`git pull <nombre> <rama>`|Actualiza la rama del repositorio local basado en el remoto|
-|`git pull <nombre> <rama> --allow-unrelated-histories`|Hace el "pull" aún cuando los proyectos no compartan la misma historia de commitos. Es útil cuando acabas de crear un repositorio remoto y has añadido al menos un commit, como los repositorios local y remoto no están relacionados, se necesita "evitar historias no relacionadas" *"allow unrelated histories"*|
+|`git pull <nombre> <rama> --allow-unrelated-histories`|Hace el "pull" aún cuando los proyectos no compartan la misma historia de commits. Es útil cuando acabas de crear un repositorio remoto y has añadido al menos un commit, como los repositorios local y remoto no están relacionados, se necesita "evitar historias no relacionadas" *"allow unrelated histories"*|
 
 ## Tags
 |Comandos de git |Descripción|
@@ -172,9 +172,9 @@ Command: `git log --all --decorate --oneline --graph`
 |`git tag -d <tag>`|Elimina el tag especificado|
 |`git push <nombre> --tags`|Añade los tags locales al repositorio remoto|
 |`git push <nombre> :refs/tags/<tag>`|Elimina el tag especificado del repositorio remoto|
-<!--
-## Additional options
-|Git commands |Description|
+
+## Opciones adicionales
+|Comandos de git |Descripción|
 |--|--|
 |`git stash`||
 |`git stash list`||
@@ -187,16 +187,16 @@ Command: `git log --all --decorate --oneline --graph`
 |`git cherry-pick <commit>`||
 |`git commit-ammend`||
 
-## Search in files and commits, find authors
-|Git commands |Description|
+## Buscar en archivos y commits, encontrar autores
+|Comandos de git |Descripción|
 |--|--|
-|`git grep <word>`|Search the specified word in the repository files. It is case sensitive. Add `-n` to show the line where the word appears, `-c` to show how many times it appears|
-|`git log -S "word"`|Search the specified word in the repository's history.|
-|`git blame <file>`|Show the author of each line of code of the specified file: Commit id, file name, Author, timestamp of last change, line, line content.|
-|`git blame -L<line>,<line> <file>`|Show the author of the specified lines after `-L`. i.e. `git blame -L45,50 README.md` shows the author of the lines 45 to 50 of the README file|
+|`git grep <palabra>`|Busca la palabra especificada en los archivos del repositorio. Distingue mayúsculas y minúsculas. Añade `-n` para mostrar la línea donde la palabra aparece, `-c` para mostrar cuantas veces|
+|`git log -S "palabra"`|Busca la palabra especificada en la historia del repositorio|
+|`git blame <archivo>`|Muestra el autor de cada línea de código del archivo especificado, además de esta información: id del commit, nombre del archivo, Autor, fecha y hora del último cambio, línea, contenido de la línea|
+|`git blame -L<línea>,<línea> <archivo>`|Muestra el autor de las líneas especificadas después de `-L`. p. ej. `git blame -L45,50 README.md` muestra el autor de las líneas 45 a 50 del archivo README|
 
-## Reset and rm
-|Git commands |Description|
+## Reset y rm
+|Comandos de git |Descripción|
 |--|--|
 |`git reset`||
 |`git reset --hard`||
@@ -204,7 +204,6 @@ Command: `git log --all --decorate --oneline --graph`
 |`git reset --soft`||
 |`git reset rm --cached`||
 |`git reset rm --force`||
--->
 
 ## Básico
 ### Para iniciar
@@ -218,3 +217,6 @@ Inicializar el directorio actual como un repositorio de git.
 * README.md
 * .gitignore
 * License
+
+The information of this cheatsheet is mainly based on this [Git and GitHub course](https://platzi.com/clases/git-github/).
+La información de este *cheatsheet* está basado principalmente en este [curso de Git y Github](https://platzi.com/clases/git-github/).
