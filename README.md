@@ -33,12 +33,12 @@
 |Git commands |Description|
 |--|--|
 |**Create/Delete**||
-|`git branch <branch>`|Creates the specified branch|
-|`git branch -d <branch>`|Deletes the specified branch|
+|`git branch <branch>`|Create the specified branch|
+|`git branch -d <branch>`|Delete the specified branch|
 |**Switch**||
 |`git checkout <branch>`|The "classic" way to switch to other branch|
 |`git switch <branch>`|Added in Git 2.23, switch provides a clearer and sleek command to do this|
-|`git switch -c <branch>`|Creates a new branch and switches to it|
+|`git switch -c <branch>`|Create a new branch and switch to it|
 |`git switch -`|Switch back to the last checked branch|
 |**Merge and Rebase**||
 |`git merge <branch>`|Merge the specified branch with the current one. The current branch has priority|
