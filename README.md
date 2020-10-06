@@ -159,7 +159,7 @@ ___
 |`git merge <branch>`|*(merge: Fusionar, combinar)* Fusiona la rama especificada con la rama actual. La rama actual tiene prioridad|
 |`git rebase <branch>`||
 
-## Volver en el tiempo (checkout y reset) 🕰️
+## Volver en el tiempo, eliminar commits o archivos (checkout, reset y rm) 🕰️
 |Comandos de git |Descripción|
 |--|--|
 |`git checkout <commit>`|Devuelve a la versión del commit especificado|
