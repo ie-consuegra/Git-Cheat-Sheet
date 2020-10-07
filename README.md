@@ -22,8 +22,8 @@
 - [Buscar en archivos y commits, encontrar autores](#buscar-en-archivos-y-commits-encontrar-autores-%EF%B8%8F%EF%B8%8F)
 
 ## Symbols / Convenciones
-⚠️- Usage can be seen as a bad practice / El uso puede considerarse una mala práctica.
-<> - Used to enclose a variable word, such as file/directory names, paths, commits ids, etc. The <> signs must not be written. / Usados para definir una palabra variable como nombres de archivos o directorios, rutas, ids de commits, etc. Los signos <> no deben incluirse en el comando.
+- ⚠️- Usage can be seen as a bad practice / El uso puede considerarse una mala práctica.
+- <> - Used to enclose a variable word, such as file/directory names, paths, commits ids, etc. The <> signs must not be written. / Usados para definir una palabra variable como nombres de archivos o directorios, rutas, ids de commits, etc. Los signos <> no deben incluirse en el comando.
 
 # Git Cheat Sheet (En)
 
@@ -226,7 +226,7 @@ ___
 |`git stash drop <stash@{num_stash}>`|Elimina el trabajo en proceso indicado. Si no se escribe el índice del stash, elimina el trabajo guardado en la posición 0. Es buena práctica eliminar los trabajos en procesos cuando ya no se necesitan|
 |`git clean --dry-run`|Muestra los archivos que eventualmente se borrarían de ejecutarse el comando `git clean -f`|
 |`git clean -f`|*(Limpiar)* Borra los archivos con los que no se esté trabajando, es decir que no estén indexados por git. Tiene en cuenta el .gitignore|
-|`git cherry-pick <commit>`|Toma el commit de otra rama y la fusiona a la rama actual sin hacer un merge. Se puede considerar mala práctica.|
+|`git cherry-pick <commit>`|Toma el commit de otra rama y la fusiona a la rama actual sin hacer un merge ⚠️|
 |`git commit --ammend`|*(Remendar commit)* Agrega cambios al último commit hecho. Como al hacer un commit, se requiere un `git add` antes de ejecutarlo|
 |`git mv <ruta origen> <ruta destino>`|Mueve o renombra un archivo de manera segura dentro del repositorio. Es decir, conserva el cambio dentro del historial|
 
