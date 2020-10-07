@@ -9,7 +9,7 @@
 - [Remote repositories](#remote-repositories-)
 - [Tags](#tags-%EF%B8%8F)
 - [Additional options](#additional-options-)
-- [Search in files and commits, find authors](#search-in-files-and-commits-find-authors-%EF%B8%8F%EF%B8%8F)|
+- [Search in files and commits, find authors](#search-in-files-and-commits-find-authors-%EF%B8%8F%EF%B8%8F)
 
 **Español - Tabla de contenido**
 
@@ -29,9 +29,10 @@
 -->
 
 # Git Cheat Sheet (En)
+
+## Start with git 🏁
 |Git command |Description|
 |--|--|
-|**Start with git**||
 |`git init`| Initialize the current directory as a git repository |
 |`git add`| Update the index of the specified directory or files to prepare for the next commit. e.g. `git add assets` add all the files of the assets directory|
 |`git add .`| Add all the files, directories and subdirectories of the current directory|
@@ -71,8 +72,8 @@
 |--|--|
 |`git checkout <commit>`|Return to the version of the specified commit|
 |`git reset`|Return to the version of the specified commit but delete all the commits done from that point on|
-|`git reset --hard <commit>`|Delete the changes staged|
-|`git reset --soft <commit>`|Keep the changes staged|
+|`git reset --hard <commit>`|Reset and delete the staged changes|
+|`git reset --soft <commit>`|Reset and keep the staged changes|
 |`git rm --cached <archivo>`|Delete the staged files but keep them on the hard disk|
 |`git rm --force <archivo>`|Delete the staged files and the files from the hard disk|
 
@@ -147,9 +148,9 @@ ___
 
 # Git Cheat Sheet (Es)
 
+## Iniciar con git 🏁
 |Comando de git |Descripción|
 |--|--|
-|**Iniciar con git**||
 |`git init`| Inicializa el directorio actual como un repositorio de git|
 |`git add`| *(add: Añadir, agregar)* Actualiza el índice usando el contenido del directorio o archivos especificados, preparándolos para el siguiente commit. p. ej. `git add assets` añade todos los archivos del directorio assets|
 |`git add .`| Añade todos los archivos, directorios y subdirectorios del directorio actual|
