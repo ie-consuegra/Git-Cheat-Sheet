@@ -21,12 +21,9 @@
 - [Opciones adicionales](#opciones-adicionales-)
 - [Buscar en archivos y commits, encontrar autores](#buscar-en-archivos-y-commits-encontrar-autores-%EF%B8%8F%EF%B8%8F)
 
-<!--
-### Symbols / Convenciones
-⚠️- Mandatory. You have to run it at some point. / Obligatorio, debes ejecutarlo en algún momento.
-⭐- Favorite. Just my preference on certain commands / Favorito, Solo es mi preferencia en algunos comandos
-<>- Must not be included in the command / No deben incluirse en el comando
--->
+## Symbols / Convenciones
+⚠️- Usage can be seen as a bad practice / El uso puede considerarse una mala práctica.
+<> - Used to enclose a variable word, such as file/directory names, paths, commits ids, etc. The <> signs must not be written. / Usados para definir una palabra variable como nombres de archivos o directorios, rutas, ids de commits, etc. Los signos <> no deben incluirse en el comando.
 
 # Git Cheat Sheet (En)
 
@@ -48,7 +45,7 @@
 |`git branch`|List branches. The current branch will be highlighted and marked with an asterisk. Add `-r` to show remote branches or `-a` to show them all|
 |`git log <path>`|Show commit logs (commit id, author, date and message), the "history", of the specified file or directory|
 |`git log --stat`|Show commit logs and how much it changed in each one|
-|`git log --all --decorate --oneline --graph`|Show a simplified tree of logs ⭐|
+|`git log --all --decorate --oneline --graph`|Show a simplified tree of logs|
 |`git show`|Show the commit logs and what changed in each one (diff)|
 |`git diff <commit A> <commit B>`|Show the differences between two commits (no need to write the whole commit id, the first 4 letters are ok) If just one commit is written, it compares it with the last one, the HEAD|
 |`git reflog`|Log of the HEAD movement or HEAD position through time. Each commit, switch, merge, even resets!|
@@ -67,15 +64,15 @@
 |`git switch -`|Switch back to the last checked branch|
 |**Merge and Rebase**||
 |`git merge <branch>`|Merge the specified branch with the current one. The current branch has priority|
-|`git rebase <branch>`||
+|`git rebase <branch>`|Rewrite the repo's history by applying the commits of one branch to another⚠️|
 
 ## "Go Back in time" and deletion of files or commits (checkout, reset, rm) 🕰️
 |Git command |Description|
 |--|--|
 |`git checkout <commit>`|Return to the version of the specified commit|
 |`git reset`|Return to the version of the specified commit but delete all the commits done from that point on|
-|`git reset --hard <commit>`|Reset and delete the staged changes|
-|`git reset --soft <commit>`|Reset and keep the staged changes|
+|`git reset --hard <commit>`|Reset and delete the staged changes ⚠️|
+|`git reset --soft <commit>`|Reset and keep the staged changes ⚠️|
 |`git rm --cached <archivo>`|Delete the staged files but keep them on the hard disk|
 |`git rm --force <archivo>`|Delete the staged files and the files from the hard disk|
 
@@ -103,17 +100,16 @@
 ## Additional options 🍒
 |Git command |Description|
 |--|--|
-|`git stash`||
-|`git stash list`||
-|`git stash pop <stash>`||
-|`git stash branch <branch>`||
-|`git stash drop <stash>`||
-|`git clean`||
-|`git clean --dry-run`||
-|`git clean -f`||
-|`git cherry-pick <commit>`||
-|`git commit-ammend`||
-|`git mv <source> <destination>`|Move or rename a file safely. That is to say, track the change and keep the history of the file|
+|`git stash`|Save WIPs (Works in progress), in other words, changes that do not deserve to be committed yet. Stash arrange the WIPs so they can be retrieved by their indexes|
+|`git stash list`|List the WIPs|
+|`git stash pop <stash@{num_stash}>`|Retrieve the change of the specified WIP. If the index is not written, get the WIP at the 0 index. `pop` does not delete the WIP, to do so, run `git stash drop`|
+|`git stash branch <branch>`|Apply the changes and creates a new branch with them|
+|`git stash drop <stash@{num_stash}>`|Delete the specified WIP. If the index is not written, delete the WIP at the 0 index. Delete unnecesary WIPs is a good practice|
+|`git clean --dry-run`|Show a list of files that a `git clean -f` command would delete if runned|
+|`git clean -f`|Delete any file the user is not working on, those that are not tracked by git. The command takes into account the .gitignore file|
+|`git cherry-pick <commit>`|Takes the commit of other branch and brings it to the current one without merging both branches ⚠️|
+|`git commit --ammend`|Add the changes to the last commit. Just as a `git commit` requires it, run `git add` before ammending|
+|`git mv <source> <destination>`|Move or rename a file safely. That is to say, track the change and keep the history registry of such a file|
 
 ## Search in files and commits, find authors 🕵️‍♀️
 |Git command |Description|
@@ -168,7 +164,7 @@ ___
 |`git branch`|Muestra una lista de las ramas. La rama actual se resalta y marca con un asterisco. Añade `-r` para mostrar las ramas remotas o `-a` para mostrarlas todas|
 |`git log <path>`|*(Bitácora)* Muestra el historial de commits (id del commit, autor, fecha y mensaje), del archivo o directorio especificado|
 |`git log --stat`|Muestra el historial de commits y cuanto cambió en cada uno|
-|`git log --all --decorate --oneline --graph`|Muestra un árbol simplificado de logs (historial de commits) ⭐|
+|`git log --all --decorate --oneline --graph`|Muestra un árbol simplificado de logs (historial de commits)|
 |`git show`|*(Mostrar)* Muestra el historial de commits y que cambió en cada uno (diff)|
 |`git diff <commit A> <commit B>`|*(diff: de difference: diferencia)* Muestra las diferencias entre dos commits (no es necesario escribir todo el id del commit, las 4 primeras letras están bien) Si solo se escribe un commit, lo compara con el último (HEAD)|
 |`git reflog`|Muestra un log del movimiento o posición del HEAD a través del tiempo. Cada commit, cambio de rama, merge, incluso los resets!|
@@ -187,15 +183,15 @@ ___
 |`git switch -`|Se cambia de regreso a la rama donde se hallaba anteriormente|
 |**Merge y Rebase**||
 |`git merge <branch>`|*(Fusionar, combinar)* Fusiona la rama especificada con la rama actual. La rama actual tiene prioridad|
-|`git rebase <branch>`|Reescribe la historia del repositorio: aplica los commits de una rama a otra. Se considera una mala práctica|
+|`git rebase <branch>`|Reescribe la historia del repositorio: aplica los commits de una rama a otra ⚠️|
 
 ## Volver en el tiempo, eliminar commits o archivos (checkout, reset y rm) 🕰️
 |Comando de git |Descripción|
 |--|--|
 |`git checkout <commit>`|Devuelve a la versión del commit especificado|
 |`git reset`|Devuelve a la versión del commit especificado y elimina los commits que se hubieran hecho de ese commit en adelante|
-|`git reset --hard <commit>`|Reset y elimina los cambios en staging|
-|`git reset --soft <commit>`|Reset y conserva los cambios en staging|
+|`git reset --hard <commit>`|Reset y elimina los cambios en staging ⚠️|
+|`git reset --soft <commit>`|Reset y conserva los cambios en staging ⚠️|
 |`git rm --cached <archivo>`|Elimina el/los archivo(s) del staging y del próximo commit pero los conserva en el disco duro|
 |`git rm --force <archivo>`|Elimina el/los archivo(s) del staging y del próximo commit. Borra los archivos del disco duro|
 
