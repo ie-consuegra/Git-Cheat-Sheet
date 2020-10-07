@@ -152,9 +152,9 @@ ___
 |Comando de git |Descripción|
 |--|--|
 |`git init`| Inicializa el directorio actual como un repositorio de git|
-|`git add`| *(add: Añadir, agregar)* Actualiza el índice usando el contenido del directorio o archivos especificados, preparándolos para el siguiente commit. p. ej. `git add assets` añade todos los archivos del directorio assets|
+|`git add`| *(Añadir, agregar)* Actualiza el índice usando el contenido del directorio o archivos especificados, preparándolos para el siguiente commit. p. ej. `git add assets` añade todos los archivos del directorio assets|
 |`git add .`| Añade todos los archivos, directorios y subdirectorios del directorio actual|
-|`git commit -m "Mensaje del commit"` |*(commit: Comprometer)* Crea un nuevo commit (graba los cambios al repositorio). Si el flag `-m` no se incluye, se lanza un editor de texto para definir el mensaje del commit|
+|`git commit -m "Mensaje del commit"` |*(Comprometer)* Crea un nuevo commit (graba los cambios al repositorio). Si el flag `-m` no se incluye, se lanza un editor de texto para definir el mensaje del commit|
 |`git commit -am "Mensaje del commit"`| Equivalente a ejecutar `git add .` y `git commit -m ...` al mismo tiempo|
 |`git reset HEAD`|Saca los archivos del área de staging. Lo contrario a `git add`|
 
@@ -164,10 +164,10 @@ ___
 |`git config --list`|Muestra una lista de todas las variables establecidas en el archivo config|
 |`git status`|Muestra el estado del árbol de trabajo ("changes not staged", "changes to be committed" (staged), "nothing to commit" ...)|
 |`git branch`|Muestra una lista de las ramas. La rama actual se resalta y marca con un asterisco. Añade `-r` para mostrar las ramas remotas o `-a` para mostrarlas todas|
-|`git log <path>`|*(log: Bitácora)* Muestra el historial de commits (id del commit, autor, fecha y mensaje), del archivo o directorio especificado|
+|`git log <path>`|*(Bitácora)* Muestra el historial de commits (id del commit, autor, fecha y mensaje), del archivo o directorio especificado|
 |`git log --stat`|Muestra el historial de commits y cuanto cambió en cada uno|
 |`git log --all --decorate --oneline --graph`|Muestra un árbol simplificado de logs (historial de commits) ⭐|
-|`git show`|*(show: Mostrar)* Muestra el historial de commits y que cambió en cada uno (diff)|
+|`git show`|*(Mostrar)* Muestra el historial de commits y que cambió en cada uno (diff)|
 |`git diff <commit A> <commit B>`|*(diff: de difference: diferencia)* Muestra las diferencias entre dos commits (no es necesario escribir todo el id del commit, las 4 primeras letras están bien) Si solo se escribe un commit, lo compara con el último (HEAD)|
 
 ## Ramas 🔀
@@ -178,12 +178,12 @@ ___
 |`git branch -d <branch>`|Elimina la rama especificada|
 |**Switch**||
 |`git checkout <branch>`|La forma "Clásica" de cambiar a otra rama|
-|`git switch <branch>`|*(switch: Cambiar)* Añadido en Git 2.23, switch provee un comando más claro y elegante para hacer esto|
+|`git switch <branch>`|*(Cambiar)* Añadido en Git 2.23, switch provee un comando más claro y elegante para hacer esto|
 |`git switch -c <branch>`|Crea una nueva rama y se cambia a esta|
 |`git switch -`|Se cambia de regreso a la rama donde se hallaba anteriormente|
 |**Merge y Rebase**||
-|`git merge <branch>`|*(merge: Fusionar, combinar)* Fusiona la rama especificada con la rama actual. La rama actual tiene prioridad|
-|`git rebase <branch>`||
+|`git merge <branch>`|*(Fusionar, combinar)* Fusiona la rama especificada con la rama actual. La rama actual tiene prioridad|
+|`git rebase <branch>`|Reescribe la historia del repositorio: aplica los commits de una rama a otra. Se considera una mala práctica|
 
 ## Volver en el tiempo, eliminar commits o archivos (checkout, reset y rm) 🕰️
 |Comando de git |Descripción|
@@ -216,19 +216,18 @@ ___
 |`git push <nombre> --tags`|Añade los tags locales al repositorio remoto|
 |`git push <nombre> :refs/tags/<tag>`|Elimina el tag especificado del repositorio remoto|
 
-## Opciones adicionales 🍒
+## Opciones adicionales para el flujo de trabajo 🍒
 |Comando de git |Descripción|
 |--|--|
-|`git stash`||
-|`git stash list`||
-|`git stash pop <stash>`||
-|`git stash branch <branch>`||
-|`git stash drop <stash>`||
-|`git clean`||
-|`git clean --dry-run`||
-|`git clean -f`||
-|`git cherry-pick <commit>`||
-|`git commit-ammend`||
+|`git stash`|*(Esconder, escondite)* Guarda trabajos en proceso, es decir cambios que no merecen un commit aún. Se guardan en un índice o arreglo|
+|`git stash list`|Muestra la lista de trabajos en proceso guardados mediante stash|
+|`git stash pop <stash@{num_stash}>`|Recupera los cambios del trabajo en proceso especificado. Si no se escribe el índice del stash, recupera el trabajo guardado en la posición 0. Pero no lo elimina del índice, se necesita `git stash drop` para eso|
+|`git stash branch <branch>`|Aplica los cambios de un stash y crea una rama nueva con ellos|
+|`git stash drop <stash@{num_stash}>`|Elimina el trabajo en proceso indicado. Si no se escribe el índice del stash, elimina el trabajo guardado en la posición 0. Es buena práctica eliminar los trabajos en procesos cuando ya no se necesitan|
+|`git clean --dry-run`|Muestra los archivos que eventualmente se borrarían de ejecutarse el comando `git clean -f`|
+|`git clean -f`|*(Limpiar)* Borra los archivos con los que no se esté trabajando, es decir que no estén indexados por git. Tiene en cuenta el .gitignore|
+|`git cherry-pick <commit>`|Toma el commit de otra rama y la fusiona a la rama actual sin hacer un merge. Se puede considerar mala práctica.|
+|`git commit --ammend`|*(Remendar commit)* Agrega cambios al último commit hecho. Como al hacer un commit, se requiere un `git add` antes de ejecutarlo|
 |`git mv <ruta origen> <ruta destino>`|Mueve o renombra un archivo de manera segura dentro del repositorio. Es decir, conserva el cambio dentro del historial|
 
 ## Buscar en archivos y commits, encontrar autores 🕵️‍♀️
@@ -264,4 +263,5 @@ Comando: `git log --all --decorate --oneline --graph`
 **Mnemotecnia**: 🐕 A dog (Un perro, en inglés) = git log --**a**ll --**d**ecorate --**o**neline --**g**raph
 ___
 The information of this cheatsheet is mainly based on this [Git and GitHub course](https://platzi.com/clases/git-github/).
+
 La información de este *cheatsheet* está basado principalmente en este [curso de Git y Github](https://platzi.com/clases/git-github/).
