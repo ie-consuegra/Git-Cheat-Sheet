@@ -51,6 +51,8 @@
 |`git log --all --decorate --oneline --graph`|Show a simplified tree of logs ⭐|
 |`git show`|Show the commit logs and what changed in each one (diff)|
 |`git diff <commit A> <commit B>`|Show the differences between two commits (no need to write the whole commit id, the first 4 letters are ok) If just one commit is written, it compares it with the last one, the HEAD|
+|`git reflog`|Log of the HEAD movement or HEAD position through time. Each commit, switch, merge, even resets!|
+|`git <command> --help`|Show the documentation of the command|
 
 ## Branches 🔀
 |Git command |Description|
@@ -169,6 +171,8 @@ ___
 |`git log --all --decorate --oneline --graph`|Muestra un árbol simplificado de logs (historial de commits) ⭐|
 |`git show`|*(Mostrar)* Muestra el historial de commits y que cambió en cada uno (diff)|
 |`git diff <commit A> <commit B>`|*(diff: de difference: diferencia)* Muestra las diferencias entre dos commits (no es necesario escribir todo el id del commit, las 4 primeras letras están bien) Si solo se escribe un commit, lo compara con el último (HEAD)|
+|`git reflog`|Muestra un log del movimiento o posición del HEAD a través del tiempo. Cada commit, cambio de rama, merge, incluso los resets!|
+|`git <comando> --help`|Muestra la documentación del comando|
 
 ## Ramas 🔀
 |Comando de git |Descripción|
@@ -190,8 +194,8 @@ ___
 |--|--|
 |`git checkout <commit>`|Devuelve a la versión del commit especificado|
 |`git reset`|Devuelve a la versión del commit especificado y elimina los commits que se hubieran hecho de ese commit en adelante|
-|`git reset --hard <commit>`|Elimina los cambios en staging|
-|`git reset --soft <commit>`|Conserva los cambios en staging|
+|`git reset --hard <commit>`|Reset y elimina los cambios en staging|
+|`git reset --soft <commit>`|Reset y conserva los cambios en staging|
 |`git rm --cached <archivo>`|Elimina el/los archivo(s) del staging y del próximo commit pero los conserva en el disco duro|
 |`git rm --force <archivo>`|Elimina el/los archivo(s) del staging y del próximo commit. Borra los archivos del disco duro|
 
@@ -237,6 +241,7 @@ ___
 |`git log -S "palabra"`|Busca la palabra especificada en la historia del repositorio|
 |`git blame <archivo>`|Muestra el autor de cada línea de código del archivo especificado, además de esta información: id del commit, nombre del archivo, Autor, fecha y hora del último cambio, línea, contenido de la línea|
 |`git blame -L<línea>,<línea> <archivo>`|Muestra el autor de las líneas especificadas después de `-L`. p. ej. `git blame -L45,50 README.md` muestra el autor de las líneas 45 a 50 del archivo README|
+|`git shortlog -sn`|Muestra cuantos commits ha hecho cada miembro del equipo. Añade `--all` Para incluir los miembros que han sido eliminados|
 
 
 ## Básico
