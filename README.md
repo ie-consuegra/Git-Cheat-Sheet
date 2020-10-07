@@ -1,6 +1,25 @@
 ### Choose your language / Escoge tu idioma
-* [English](#git-cheat-sheet-en)
-* [Español](#git-cheat-sheet-es)
+
+**English - Table of content**
+
+- [Start](#git-cheat-sheet-en)
+- [Get information]()
+- [Branches](#branches-)
+- ["Go back in time" and deletion of files or commits](#go-back-in-time-and-deletion-of-files-or-commits-checkout-reset-rm-%EF%B8%8F)
+- [Remote repositories](#remote-repositories-)
+- [Tags](#tags-%EF%B8%8F)
+- [Additional options](#additional-options-)
+- [Search in files and commits, find authors](#search-in-files-and-commits-find-authors-%EF%B8%8F%EF%B8%8F)|
+
+**Español - Tabla de contenido**
+
+- [Iniciar](#git-cheat-sheet-)
+- [Ramas](#ramas-)
+- [Volver en el tiempo, eliminar commits o archivos](#volver-en-el-tiempo-eliminar-commits-o-archivos-checkout-reset-y-rm-%EF%B8%8F)
+- [Repositorios remotos](#repositorios-remotos-)
+- [Tags](#tags-%EF%B8%8F-1)
+- [Opciones adicionales](#opciones-adicionales-)
+- [Buscar en archivos y commits, encontrar autores](#buscar-en-archivos-y-commits-encontrar-autores-%EF%B8%8F%EF%B8%8F)
 
 <!--
 ### Symbols / Convenciones
@@ -10,7 +29,7 @@
 -->
 
 # Git Cheat Sheet (En)
-|Git commands |Description|
+|Git command |Description|
 |--|--|
 |**Start with git**||
 |`git init`| Initialize the current directory as a git repository |
@@ -19,7 +38,10 @@
 |`git commit -m "Commit message"` | Create a new commit (record the changes to the repository). If the `-m` flag is not included, it launches a text editor to define the message of the commit |
 |`git commit -am "Commit message"`|It is like running `git add .` and `git commit -m ...` at the same time|
 |`git reset HEAD`|Unstage the files. The opposite of `git add`|
-|**Get information**||
+
+## Get information 📜
+|Git command |Description|
+|--|--|
 |`git config --list`|List all variables set in config file|
 |`git status`|Show the working tree status ("changes not staged", "changes to be committed" (staged), "nothing to commit" ...)|
 |`git branch`|List branches. The current branch will be highlighted and marked with an asterisk. Add `-r` to show remote branches or `-a` to show them all|
@@ -30,7 +52,7 @@
 |`git diff <commit A> <commit B>`|Show the differences between two commits (no need to write the whole commit id, the first 4 letters are ok) If just one commit is written, it compares it with the last one, the HEAD|
 
 ## Branches 🔀
-|Git commands |Description|
+|Git command |Description|
 |--|--|
 |**Create/Delete**||
 |`git branch <branch>`|Create the specified branch|
@@ -45,7 +67,7 @@
 |`git rebase <branch>`||
 
 ## "Go Back in time" and deletion of files or commits (checkout, reset, rm) 🕰️
-|Git commands |Description|
+|Git command |Description|
 |--|--|
 |`git checkout <commit>`|Return to the version of the specified commit|
 |`git reset`|Return to the version of the specified commit but delete all the commits done from that point on|
@@ -55,7 +77,7 @@
 |`git rm --force <archivo>`|Delete the staged files and the files from the hard disk|
 
 ## Remote repositories 📡
-|Git commands |Description|
+|Git command |Description|
 |--|--|
 |`git clone <url>`|Clone a remote repository into the current directory|
 |`git remote`|Show the remote repositories (by name). Add the flag `-v` to see the urls too|
@@ -66,7 +88,7 @@
 |`git pull <name> <branch> --allow-unrelated-histories`|Pull even when the projects mismatch commit histories. Useful when you just created a remote repo and added at least one commit, as local and remote repos are now unrelated, you need to "allow unrelated histories"|
 
 ## Tags 🏷️
-|Git commands |Description|
+|Git command |Description|
 |--|--|
 |`git tag`|List all tags|
 |`git show-ref --tags`|List tags and their commit ids|
@@ -76,7 +98,7 @@
 |`git push <name> :refs/tags/<tag>`|Delete the specified tag in the remote repository|
 
 ## Additional options 🍒
-|Git commands |Description|
+|Git command |Description|
 |--|--|
 |`git stash`||
 |`git stash list`||
@@ -91,7 +113,7 @@
 |`git mv <source> <destination>`|Move or rename a file safely. That is to say, track the change and keep the history of the file|
 
 ## Search in files and commits, find authors 🕵️‍♀️
-|Git commands |Description|
+|Git command |Description|
 |--|--|
 |`git grep <word>`|Search the specified word in the repository files. It is case sensitive. Add `-n` to show the line where the word appears, `-c` to show how many times it appears|
 |`git log -S "word"`|Search the specified word in the repository's history|
@@ -125,7 +147,7 @@ ___
 
 # Git Cheat Sheet (Es)
 
-|Comandos de git |Descripción|
+|Comando de git |Descripción|
 |--|--|
 |**Iniciar con git**||
 |`git init`| Inicializa el directorio actual como un repositorio de git|
@@ -134,7 +156,10 @@ ___
 |`git commit -m "Mensaje del commit"` |*(commit: Comprometer)* Crea un nuevo commit (graba los cambios al repositorio). Si el flag `-m` no se incluye, se lanza un editor de texto para definir el mensaje del commit|
 |`git commit -am "Mensaje del commit"`| Equivalente a ejecutar `git add .` y `git commit -m ...` al mismo tiempo|
 |`git reset HEAD`|Saca los archivos del área de staging. Lo contrario a `git add`|
-|**Obtener información**||
+
+## Obtener información 📜
+|Comando de git |Descripción|
+|--|--|
 |`git config --list`|Muestra una lista de todas las variables establecidas en el archivo config|
 |`git status`|Muestra el estado del árbol de trabajo ("changes not staged", "changes to be committed" (staged), "nothing to commit" ...)|
 |`git branch`|Muestra una lista de las ramas. La rama actual se resalta y marca con un asterisco. Añade `-r` para mostrar las ramas remotas o `-a` para mostrarlas todas|
@@ -145,7 +170,7 @@ ___
 |`git diff <commit A> <commit B>`|*(diff: de difference: diferencia)* Muestra las diferencias entre dos commits (no es necesario escribir todo el id del commit, las 4 primeras letras están bien) Si solo se escribe un commit, lo compara con el último (HEAD)|
 
 ## Ramas 🔀
-|Comandos de git |Descripción|
+|Comando de git |Descripción|
 |--|--|
 |**Crear/Eliminar**||
 |`git branch <branch>`|Crea la rama especificada|
@@ -160,7 +185,7 @@ ___
 |`git rebase <branch>`||
 
 ## Volver en el tiempo, eliminar commits o archivos (checkout, reset y rm) 🕰️
-|Comandos de git |Descripción|
+|Comando de git |Descripción|
 |--|--|
 |`git checkout <commit>`|Devuelve a la versión del commit especificado|
 |`git reset`|Devuelve a la versión del commit especificado y elimina los commits que se hubieran hecho de ese commit en adelante|
@@ -170,7 +195,7 @@ ___
 |`git rm --force <archivo>`|Elimina el/los archivo(s) del staging y del próximo commit. Borra los archivos del disco duro|
 
 ## Repositorios remotos 📡
-|Comandos de git |Descripción|
+|Comando de git |Descripción|
 |--|--|
 |`git clone <url>`|Clona un repositorio remoto al directorio local|
 |`git remote`|Muestra los repositorios remotos (Por nombre). Añade la bandera `-v` para ver las urls también|
@@ -181,7 +206,7 @@ ___
 |`git pull <nombre> <rama> --allow-unrelated-histories`|Hace el "pull" aún cuando los proyectos no compartan la misma historia de commits. Es útil cuando acabas de crear un repositorio remoto y has añadido al menos un commit, como los repositorios local y remoto no están relacionados, se necesita "evitar historias no relacionadas" *"allow unrelated histories"*|
 
 ## Tags 🏷️
-|Comandos de git |Descripción|
+|Comando de git |Descripción|
 |--|--|
 |`git tag`|Muestra la lista de tags|
 |`git show-ref --tags`|Muestra la lista de tags y sus id|
@@ -191,7 +216,7 @@ ___
 |`git push <nombre> :refs/tags/<tag>`|Elimina el tag especificado del repositorio remoto|
 
 ## Opciones adicionales 🍒
-|Comandos de git |Descripción|
+|Comando de git |Descripción|
 |--|--|
 |`git stash`||
 |`git stash list`||
@@ -206,7 +231,7 @@ ___
 |`git mv <ruta origen> <ruta destino>`|Mueve o renombra un archivo de manera segura dentro del repositorio. Es decir, conserva el cambio dentro del historial|
 
 ## Buscar en archivos y commits, encontrar autores 🕵️‍♀️
-|Comandos de git |Descripción|
+|Comando de git |Descripción|
 |--|--|
 |`git grep <palabra>`|Busca la palabra especificada en los archivos del repositorio. Distingue mayúsculas y minúsculas. Añade `-n` para mostrar la línea donde la palabra aparece, `-c` para mostrar cuantas veces|
 |`git log -S "palabra"`|Busca la palabra especificada en la historia del repositorio|
