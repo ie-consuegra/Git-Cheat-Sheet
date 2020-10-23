@@ -54,9 +54,10 @@
 ## Branches 🔀
 |Git command |Description|
 |--|--|
-|**Create/Delete**||
+|**Create/Delete/Rename**||
 |`git branch <branch>`|Create the specified branch|
 |`git branch -d <branch>`|Delete the specified branch|
+|`git branch -m <oldbranch> <newbranch>`|Change the name of old branch to new branch|
 |**Switch**||
 |`git checkout <branch>`|The "classic" way to switch to other branch|
 |`git switch <branch>`|Added in Git 2.23, switch provides a clearer and sleek command to do this|
@@ -108,7 +109,7 @@
 |`git clean --dry-run`|Show a list of files that a `git clean -f` command would delete if runned|
 |`git clean -f`|Delete any file the user is not working on, those that are not tracked by git. The command takes into account the .gitignore file|
 |`git cherry-pick <commit>`|Takes the commit of other branch and brings it to the current one without merging both branches ⚠️|
-|`git commit --amend`|Add the changes to the last commit. Just as a `git commit` requires it, run `git add` before ammending|
+|`git commit --amend`|Add the changes to the last commit. Just as a `git commit` requires it, run `git add` before amending|
 |`git mv <source> <destination>`|Move or rename a file safely. That is to say, track the change and keep the history registry of such a file|
 
 ## Search in files and commits, find authors 🕵️‍♀️
@@ -173,17 +174,18 @@ ___
 ## Ramas 🔀
 |Comando de git |Descripción|
 |--|--|
-|**Crear/Eliminar**||
-|`git branch <branch>`|Crea la rama especificada|
-|`git branch -d <branch>`|Elimina la rama especificada|
+|**Crear/Eliminar/Renombrar**||
+|`git branch <rama>`|Crea la rama especificada|
+|`git branch -d <rama>`|Elimina la rama especificada|
+|`git branch -m <ramavieja> <ramanueva>`|Cambia el nombre de rama vieja a rama nueva|
 |**Switch**||
-|`git checkout <branch>`|La forma "Clásica" de cambiar a otra rama|
-|`git switch <branch>`|*(Cambiar)* Añadido en Git 2.23, switch provee un comando más claro y elegante para hacer esto|
-|`git switch -c <branch>`|Crea una nueva rama y se cambia a esta|
+|`git checkout <rama>`|La forma "Clásica" de cambiar a otra rama|
+|`git switch <rama>`|*(Cambiar)* Añadido en Git 2.23, switch provee un comando más claro y elegante para hacer esto|
+|`git switch -c <rama>`|Crea una nueva rama y se cambia a esta|
 |`git switch -`|Se cambia de regreso a la rama donde se hallaba anteriormente|
 |**Merge y Rebase**||
-|`git merge <branch>`|*(Fusionar, combinar)* Fusiona la rama especificada con la rama actual. La rama actual tiene prioridad|
-|`git rebase <branch>`|Reescribe la historia del repositorio: aplica los commits de una rama a otra ⚠️|
+|`git merge <rama>`|*(Fusionar, combinar)* Fusiona la rama especificada con la rama actual. La rama actual tiene prioridad|
+|`git rebase <rama>`|Reescribe la historia del repositorio: aplica los commits de una rama a otra ⚠️|
 
 ## Volver en el tiempo, eliminar commits o archivos (checkout, reset y rm) 🕰️
 |Comando de git |Descripción|
