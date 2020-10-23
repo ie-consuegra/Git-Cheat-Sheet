@@ -108,7 +108,7 @@
 |`git clean --dry-run`|Show a list of files that a `git clean -f` command would delete if runned|
 |`git clean -f`|Delete any file the user is not working on, those that are not tracked by git. The command takes into account the .gitignore file|
 |`git cherry-pick <commit>`|Takes the commit of other branch and brings it to the current one without merging both branches ⚠️|
-|`git commit --ammend`|Add the changes to the last commit. Just as a `git commit` requires it, run `git add` before ammending|
+|`git commit --amend`|Add the changes to the last commit. Just as a `git commit` requires it, run `git add` before ammending|
 |`git mv <source> <destination>`|Move or rename a file safely. That is to say, track the change and keep the history registry of such a file|
 
 ## Search in files and commits, find authors 🕵️‍♀️
@@ -227,7 +227,7 @@ ___
 |`git clean --dry-run`|Muestra los archivos que eventualmente se borrarían de ejecutarse el comando `git clean -f`|
 |`git clean -f`|*(Limpiar)* Borra los archivos con los que no se esté trabajando, es decir que no estén indexados por git. Tiene en cuenta el .gitignore|
 |`git cherry-pick <commit>`|Toma el commit de otra rama y la fusiona a la rama actual sin hacer un merge ⚠️|
-|`git commit --ammend`|*(Remendar commit)* Agrega cambios al último commit hecho. Como al hacer un commit, se requiere un `git add` antes de ejecutarlo|
+|`git commit --amend`|*(Remendar commit)* Agrega cambios al último commit hecho. Como al hacer un commit, se requiere un `git add` antes de ejecutarlo|
 |`git mv <ruta origen> <ruta destino>`|Mueve o renombra un archivo de manera segura dentro del repositorio. Es decir, conserva el cambio dentro del historial|
 
 ## Buscar en archivos y commits, encontrar autores 🕵️‍♀️
