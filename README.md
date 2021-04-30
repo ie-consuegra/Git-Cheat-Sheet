@@ -2,8 +2,8 @@
 
 **English - Table of content**
 
-- [Start](#git-cheat-sheet-en)
-- [Get information]()
+- [Start with git](#start-with-git-)
+- [Get information](#get-information-)
 - [Local branches](#local-branches-)
 - ["Go back in time" and deletion of files or commits](#go-back-in-time-and-deletion-of-files-or-commits-checkout-reset-rm-%EF%B8%8F)
 - [Remote repositories](#remote-repositories-)
@@ -13,12 +13,13 @@
 
 **Español - Tabla de contenido**
 
-- [Iniciar](#git-cheat-sheet-)
+- [Iniciar con git](##iniciar-con-git-)
+- [Obtener información](#obtener-informacion-)
 - [Ramas locales](#ramas-locales-)
 - [Volver en el tiempo, eliminar commits o archivos](#volver-en-el-tiempo-eliminar-commits-o-archivos-checkout-reset-y-rm-%EF%B8%8F)
 - [Repositorios remotos](#repositorios-remotos-)
 - [Tags](#tags-%EF%B8%8F-1)
-- [Opciones adicionales](#opciones-adicionales-)
+- [Opciones adicionales](#opciones-adicionales-para-el-flujo-de-trabajo-)
 - [Buscar en archivos y commits, encontrar autores](#buscar-en-archivos-y-commits-encontrar-autores-%EF%B8%8F%EF%B8%8F)
 
 ## Symbols / Convenciones
@@ -37,6 +38,8 @@
 |`git commit -am "Commit message"`|It is like running `git add .` and `git commit -m ...` at the same time|
 |`git reset HEAD`|Unstage the files. The opposite of `git add`|
 
+[Go back to table of content ↑](#choose-your-language--escoge-tu-idioma)
+
 ## Get information 📜
 |Git command |Description|
 |--|--|
@@ -50,6 +53,8 @@
 |`git diff <commit A> <commit B>`|Show the differences between two commits (no need to write the whole commit id, the first 4 letters are ok) If just one commit is written, it compares it with the last one, the HEAD|
 |`git reflog`|Log of the HEAD movement or HEAD position through time. Each commit, switch, merge, even resets!|
 |`git <command> --help`|Show the documentation of the command|
+
+[Go back to table of content ↑](#choose-your-language--escoge-tu-idioma)
 
 ## Local branches 🔀
 |Git command |Description|
@@ -67,6 +72,8 @@
 |`git merge <branch>`|Merge the specified branch with the current one. The current branch has priority|
 |`git rebase <branch>`|Rewrite the repo's history by applying the commits of one branch to another⚠️|
 
+[Go back to table of content ↑](#choose-your-language--escoge-tu-idioma)
+
 ## "Go Back in time" and deletion of files or commits (checkout, reset, rm) 🕰️
 |Git command |Description|
 |--|--|
@@ -76,6 +83,8 @@
 |`git reset --soft <commit>`|Reset and keep the staged changes ⚠️|
 |`git rm --cached <archivo>`|Delete the staged files but keep them on the hard disk|
 |`git rm --force <archivo>`|Delete the staged files and the files from the hard disk|
+
+[Go back to table of content ↑](#choose-your-language--escoge-tu-idioma)
 
 ## Remote repositories 📡
 |Git command |Description|
@@ -88,6 +97,8 @@
 |`git push <name> --delete <branch>`|Delete a remote branch. Remember the `--delete` flag|
 |`git pull <name> <branch>`|Update the branch of the local repo based on the remote one|
 |`git pull <name> <branch> --allow-unrelated-histories`|Pull even when the projects mismatch commit histories. Useful when you just created a remote repo and added at least one commit, as local and remote repos are now unrelated, you need to "allow unrelated histories"|
+
+[Go back to table of content ↑](#choose-your-language--escoge-tu-idioma)
 
 ## Tags 🏷️
 |Git command |Description|
@@ -113,6 +124,8 @@
 |`git commit --amend`|Add the changes to the last commit. Just as a `git commit` requires it, run `git add` before amending|
 |`git mv <source> <destination>`|Move or rename a file safely. That is to say, track the change and keep the history registry of such a file|
 
+[Go back to table of content ↑](#choose-your-language--escoge-tu-idioma)
+
 ## Search in files and commits, find authors 🕵️‍♀️
 |Git command |Description|
 |--|--|
@@ -120,6 +133,8 @@
 |`git log -S "word"`|Search the specified word in the repository's history|
 |`git blame <file>`|Show the author of each line of code of the specified file: Commit id, file name, Author, timestamp of last change, line, line content|
 |`git blame -L<line>,<line> <file>`|Show the author of the specified lines after `-L`. i.e. `git blame -L45,50 README.md` shows the author of the lines 45 to 50 of the README file|
+
+[Go back to table of content ↑](#choose-your-language--escoge-tu-idioma)
 
 
 ## Basics
@@ -144,6 +159,8 @@ Command: `git log --all --decorate --oneline --graph`
 
 **Mnemonics**: 🐕 A dog = git log --**a**ll --**d**ecorate --**o**neline --**g**raph
 
+[Go back to table of content ↑](#choose-your-language--escoge-tu-idioma)
+
 ___
 
 # Git Cheat Sheet (Es)
@@ -158,6 +175,8 @@ ___
 |`git commit -am "Mensaje del commit"`| Equivalente a ejecutar `git add .` y `git commit -m ...` al mismo tiempo|
 |`git reset HEAD`|Saca los archivos del área de staging. Lo contrario a `git add`|
 
+[Regresar a la tabla de contenido ↑](#choose-your-language--escoge-tu-idioma)
+
 ## Obtener información 📜
 |Comando de git |Descripción|
 |--|--|
@@ -171,6 +190,8 @@ ___
 |`git diff <commit A> <commit B>`|*(diff: de difference: diferencia)* Muestra las diferencias entre dos commits (no es necesario escribir todo el id del commit, las 4 primeras letras están bien) Si solo se escribe un commit, lo compara con el último (HEAD)|
 |`git reflog`|Muestra un log del movimiento o posición del HEAD a través del tiempo. Cada commit, cambio de rama, merge, incluso los resets!|
 |`git <comando> --help`|Muestra la documentación del comando|
+
+[Regresar a la tabla de contenido ↑](#choose-your-language--escoge-tu-idioma)
 
 ## Ramas locales 🔀
 |Comando de git |Descripción|
@@ -188,6 +209,8 @@ ___
 |`git merge <rama>`|*(Fusionar, combinar)* Fusiona la rama especificada con la rama actual. La rama actual tiene prioridad|
 |`git rebase <rama>`|Reescribe la historia del repositorio: aplica los commits de una rama a otra ⚠️|
 
+[Regresar a la tabla de contenido ↑](#choose-your-language--escoge-tu-idioma)
+
 ## Volver en el tiempo, eliminar commits o archivos (checkout, reset y rm) 🕰️
 |Comando de git |Descripción|
 |--|--|
@@ -197,6 +220,8 @@ ___
 |`git reset --soft <commit>`|Reset y conserva los cambios en staging ⚠️|
 |`git rm --cached <archivo>`|Elimina el/los archivo(s) del staging y del próximo commit pero los conserva en el disco duro|
 |`git rm --force <archivo>`|Elimina el/los archivo(s) del staging y del próximo commit. Borra los archivos del disco duro|
+
+[Regresar a la tabla de contenido ↑](#choose-your-language--escoge-tu-idioma)
 
 ## Repositorios remotos 📡
 |Comando de git |Descripción|
@@ -210,6 +235,8 @@ ___
 |`git pull <nombre> <rama>`|Actualiza la rama del repositorio local basado en el remoto|
 |`git pull <nombre> <rama> --allow-unrelated-histories`|Hace el "pull" aún cuando los proyectos no compartan la misma historia de commits. Es útil cuando acabas de crear un repositorio remoto y has añadido al menos un commit, como los repositorios local y remoto no están relacionados, se necesita "evitar historias no relacionadas" *"allow unrelated histories"*|
 
+[Regresar a la tabla de contenido ↑](#choose-your-language--escoge-tu-idioma)
+
 ## Tags 🏷️
 |Comando de git |Descripción|
 |--|--|
@@ -219,6 +246,8 @@ ___
 |`git tag -d <tag>`|Elimina el tag especificado|
 |`git push <nombre> --tags`|Añade los tags locales al repositorio remoto|
 |`git push <nombre> :refs/tags/<tag>`|Elimina el tag especificado del repositorio remoto|
+
+[Regresar a la tabla de contenido ↑](#choose-your-language--escoge-tu-idioma)
 
 ## Opciones adicionales para el flujo de trabajo 🍒
 |Comando de git |Descripción|
@@ -234,6 +263,8 @@ ___
 |`git commit --amend`|*(Remendar commit)* Agrega cambios al último commit hecho. Como al hacer un commit, se requiere un `git add` antes de ejecutarlo|
 |`git mv <ruta origen> <ruta destino>`|Mueve o renombra un archivo de manera segura dentro del repositorio. Es decir, conserva el cambio dentro del historial|
 
+[Regresar a la tabla de contenido ↑](#choose-your-language--escoge-tu-idioma)
+
 ## Buscar en archivos y commits, encontrar autores 🕵️‍♀️
 |Comando de git |Descripción|
 |--|--|
@@ -243,6 +274,7 @@ ___
 |`git blame -L<línea>,<línea> <archivo>`|Muestra el autor de las líneas especificadas después de `-L`. p. ej. `git blame -L45,50 README.md` muestra el autor de las líneas 45 a 50 del archivo README|
 |`git shortlog -sn`|Muestra cuantos commits ha hecho cada miembro del equipo. Añade `--all` Para incluir los miembros que han sido eliminados|
 
+[Regresar a la tabla de contenido ↑](#choose-your-language--escoge-tu-idioma)
 
 ## Básico
 ### Para iniciar
@@ -266,6 +298,9 @@ Para "volver al presente" ejecuta `git switch -`, si deseas crear cambios en ese
 Comando: `git log --all --decorate --oneline --graph`
 
 **Mnemotecnia**: 🐕 A dog (Un perro, en inglés) = git log --**a**ll --**d**ecorate --**o**neline --**g**raph
+
+[Regresar a la tabla de contenido ↑](#choose-your-language--escoge-tu-idioma)
+
 ___
 The information of this cheatsheet is mainly based on this [Git and GitHub course](https://platzi.com/clases/git-github/).
 
