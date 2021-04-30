@@ -110,6 +110,8 @@
 |`git push <name> --tags`|Add the local tags to the remote repository|
 |`git push <name> :refs/tags/<tag>`|Delete the specified tag in the remote repository|
 
+[Go back to table of content ↑](#choose-your-language--escoge-tu-idioma)
+
 ## Additional options 🍒
 |Git command |Description|
 |--|--|
