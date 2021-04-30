@@ -4,7 +4,7 @@
 
 - [Start](#git-cheat-sheet-en)
 - [Get information]()
-- [Branches](#branches-)
+- [Local branches](#local-branches-)
 - ["Go back in time" and deletion of files or commits](#go-back-in-time-and-deletion-of-files-or-commits-checkout-reset-rm-%EF%B8%8F)
 - [Remote repositories](#remote-repositories-)
 - [Tags](#tags-%EF%B8%8F)
@@ -14,7 +14,7 @@
 **Español - Tabla de contenido**
 
 - [Iniciar](#git-cheat-sheet-)
-- [Ramas](#ramas-)
+- [Ramas locales](#ramas-locales-)
 - [Volver en el tiempo, eliminar commits o archivos](#volver-en-el-tiempo-eliminar-commits-o-archivos-checkout-reset-y-rm-%EF%B8%8F)
 - [Repositorios remotos](#repositorios-remotos-)
 - [Tags](#tags-%EF%B8%8F-1)
@@ -51,7 +51,7 @@
 |`git reflog`|Log of the HEAD movement or HEAD position through time. Each commit, switch, merge, even resets!|
 |`git <command> --help`|Show the documentation of the command|
 
-## Branches 🔀
+## Local branches 🔀
 |Git command |Description|
 |--|--|
 |**Create/Delete/Rename**||
@@ -85,6 +85,7 @@
 |`git remote add <name> <url>`|Create a new connection to a remote repository. This will be called by the specified name (generally called, "origin" and "upstream")|
 |`git push <name> <branch>`|Update the branch of the remote repo based on the local one|
 |`git push -u <name> <branch>`|The same as above. But, set up tracking. So, after running it, you can use `git pull` or `git push`, without specifying the name of the remote repo nor the branch|
+|`git push <name> --delete <branch>`|Delete a remote branch. Remember the `--delete` flag|
 |`git pull <name> <branch>`|Update the branch of the local repo based on the remote one|
 |`git pull <name> <branch> --allow-unrelated-histories`|Pull even when the projects mismatch commit histories. Useful when you just created a remote repo and added at least one commit, as local and remote repos are now unrelated, you need to "allow unrelated histories"|
 
@@ -171,7 +172,7 @@ ___
 |`git reflog`|Muestra un log del movimiento o posición del HEAD a través del tiempo. Cada commit, cambio de rama, merge, incluso los resets!|
 |`git <comando> --help`|Muestra la documentación del comando|
 
-## Ramas 🔀
+## Ramas locales 🔀
 |Comando de git |Descripción|
 |--|--|
 |**Crear/Eliminar/Renombrar**||
@@ -205,6 +206,7 @@ ___
 |`git remote add <nombre> <url>`|Crea una nueva conexión a un repositorio remoto. Este será llamado por el nombre especificado ("origin" y "upstream" son nombres usuales)|
 |`git push <nombre> <rama>`|Actualiza la rama del repositorio remoto basado en el local|
 |`git push -u <nombre> <rama>`|Igual que el mencionado arriba. Sin embargo, establece una conexión o rastreo. Es decir, después de ejecutarlo podrás usar `git pull` o `git push`, sin especificar el nombre del repositorio remoto ni la rama|
+|`git push <name> --delete <branch>`|Elimina una rama remota. Recuerda el flag `--delete`|
 |`git pull <nombre> <rama>`|Actualiza la rama del repositorio local basado en el remoto|
 |`git pull <nombre> <rama> --allow-unrelated-histories`|Hace el "pull" aún cuando los proyectos no compartan la misma historia de commits. Es útil cuando acabas de crear un repositorio remoto y has añadido al menos un commit, como los repositorios local y remoto no están relacionados, se necesita "evitar historias no relacionadas" *"allow unrelated histories"*|
 
