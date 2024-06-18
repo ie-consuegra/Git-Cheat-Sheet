@@ -95,6 +95,7 @@
 |`git push <name> <branch>`|Update the branch of the remote repo based on the local one|
 |`git push -u <name> <branch>`|The same as above. But, set up tracking. So, after running it, you can use `git pull` or `git push`, without specifying the name of the remote repo nor the branch|
 |`git push <name> --delete <branch>`|Delete a remote branch. Remember the `--delete` flag|
+|`git push --set-upstream origin <localbranch>`|Creates a new branch on the remote repository, in this example it is called 'origin'|
 |`git pull <name> <branch>`|Update the branch of the local repo based on the remote one|
 |`git pull <name> <branch> --allow-unrelated-histories`|Pull even when the projects mismatch commit histories. Useful when you just created a remote repo and added at least one commit, as local and remote repos are now unrelated, you need to "allow unrelated histories"|
 
@@ -235,6 +236,7 @@ ___
 |`git push <nombre> <rama>`|Actualiza la rama del repositorio remoto basado en el local|
 |`git push -u <nombre> <rama>`|Igual que el mencionado arriba. Sin embargo, establece una conexión o rastreo. Es decir, después de ejecutarlo podrás usar `git pull` o `git push`, sin especificar el nombre del repositorio remoto ni la rama|
 |`git push <name> --delete <branch>`|Elimina una rama remota. Recuerda el flag `--delete`|
+|`git push --set-upstream origin <localbranch>`|Crea una nueva rama en el repositorio remoto, en este ejemplo es llamado 'origin'|
 |`git pull <nombre> <rama>`|Actualiza la rama del repositorio local basado en el remoto|
 |`git pull <nombre> <rama> --allow-unrelated-histories`|Hace el "pull" aún cuando los proyectos no compartan la misma historia de commits. Es útil cuando acabas de crear un repositorio remoto y has añadido al menos un commit, como los repositorios local y remoto no están relacionados, se necesita "evitar historias no relacionadas" *"allow unrelated histories"*|
 
