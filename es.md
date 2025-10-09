@@ -15,6 +15,25 @@
 - ⚠️- El uso puede considerarse una mala práctica.
 - <> - Usados para definir una palabra variable como nombres de archivos o directorios, rutas, ids de commits, etc. Los signos <> no deben incluirse en el comando.
 
+## Configurar por primera vez
+|Comando de git |Descripción|
+|--|--|
+|`git config --global user.name "Tu nombre"`| Guarda el nombre del usuario de globalmente, si no se pasa un nombre entre comillas (") retorna el nombre de usuario que esté configurado|
+|`git config --global user.email "Tu email"`|Guarda el correo electrónico globalmente, si no se pasa un email entre comillas (") retorna el email que esté configurado|
+
+### Configurar conexión SSH con GitHub
+|Comando de git |Descripción|
+|--|--|
+|`ssh-keygen -t ed25519 -C "tu_email@ejemplo.com"`| Genera un par de claves SSH usando Ed25519|
+|`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`| Genera un par de claves SSH usando RSA|
+|`eval "$(ssh-agent -s)"`| Inicia el ssh-agent en segundo plano|
+|`ssh-add ~/.ssh/id_ed25519`| Añade la clave privada al ssh-agent, si se usó RSA reemplazar `id_25519` por `id_rsa`|
+|`cat ~/.ssh/id_ed25519.pub`| Muestra la clave pública en consola para copiarla y añadirla a GitHub|
+* Inicias sesión en GitHub
+* Ir a Configuración > SSH y llaves GPG
+* Añadir un título descriptivo para identificar la llave
+* Pegar la llave en el campo que corresponde y seguir los pasos para terminar la configuración
+
 ## Iniciar con git 🏁
 |Comando de git |Descripción|
 |--|--|
