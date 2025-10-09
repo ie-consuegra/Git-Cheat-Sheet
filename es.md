@@ -11,6 +11,10 @@
 - [Opciones adicionales](#opciones-adicionales-para-el-flujo-de-trabajo-🍒)
 - [Buscar en archivos y commits, encontrar autores](#buscar-en-archivos-y-commits-encontrar-autores-🕵️‍♀️)
 
+## Convenciones
+- ⚠️- El uso puede considerarse una mala práctica.
+- <> - Usados para definir una palabra variable como nombres de archivos o directorios, rutas, ids de commits, etc. Los signos <> no deben incluirse en el comando.
+
 ## Iniciar con git 🏁
 |Comando de git |Descripción|
 |--|--|

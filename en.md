@@ -11,6 +11,10 @@
 - [Additional options](#additional-options-🍒)
 - [Search in files and commits, find authors](#search-in-files-and-commits-find-authors-🕵️‍♀️)
 
+## Symbols
+- ⚠️- Usage can be seen as a bad practice.
+- <> - Used to enclose a variable word, such as file/directory names, paths, commits ids, etc. The <> signs must not be written.
+
 ## Start with git 🏁
 |Git command |Description|
 |--|--|
