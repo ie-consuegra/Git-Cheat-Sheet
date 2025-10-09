@@ -2,25 +2,25 @@
 
 **English - Table of content**
 
-- [Start with git](#start-with-git-)
-- [Get information](#get-information-)
-- [Local branches](#local-branches-)
-- ["Go back in time" and deletion of files or commits](#go-back-in-time-and-deletion-of-files-or-commits-checkout-reset-rm-%EF%B8%8F)
-- [Remote repositories](#remote-repositories-)
-- [Tags](#tags-%EF%B8%8F)
-- [Additional options](#additional-options-)
-- [Search in files and commits, find authors](#search-in-files-and-commits-find-authors-%EF%B8%8F%EF%B8%8F)
+- [Start with git](/en.md#start-with-git-🏁)
+- [Get information](/en.md#get-information-📜)
+- [Local branches](/en.md#local-branches-🕰️)
+- ["Go back in time" and deletion of files or commits](/en.md#go-back-in-time-and-deletion-of-files-or-commits-checkout-reset-rm-🕰️)
+- [Remote repositories](/en.md#remote-repositories-📡)
+- [Tags](/en.md#tags-🏷️)
+- [Additional options](/en.md#additional-options-)
+- [Search in files and commits, find authors](/en.md#search-in-files-and-commits-find-authors-🕵️‍♀️)
 
 **Español - Tabla de contenido**
 
-- [Iniciar con git](##iniciar-con-git-)
-- [Obtener información](#obtener-informacion-)
-- [Ramas locales](#ramas-locales-)
-- [Volver en el tiempo, eliminar commits o archivos](#volver-en-el-tiempo-eliminar-commits-o-archivos-checkout-reset-y-rm-%EF%B8%8F)
-- [Repositorios remotos](#repositorios-remotos-)
-- [Tags](#tags-%EF%B8%8F-1)
-- [Opciones adicionales](#opciones-adicionales-para-el-flujo-de-trabajo-)
-- [Buscar en archivos y commits, encontrar autores](#buscar-en-archivos-y-commits-encontrar-autores-%EF%B8%8F%EF%B8%8F)
+- [Iniciar con git](/es.md#iniciar-con-git-🏁)
+- [Obtener información](/es.md#obtener-informacion-📜)
+- [Ramas locales](/es.md#ramas-locales-🔀)
+- [Volver en el tiempo, eliminar commits o archivos](/es.md#volver-en-el-tiempo-eliminar-commits-o-archivos-checkout-reset-y-rm-🕰️)
+- [Repositorios remotos](/es.md#repositorios-remotos-📡)
+- [Tags](/es.md#tags-🏷️)
+- [Opciones adicionales](/es.md#opciones-adicionales-para-el-flujo-de-trabajo-🍒)
+- [Buscar en archivos y commits, encontrar autores](/es.md#buscar-en-archivos-y-commits-encontrar-autores-🕵️‍♀️)
 
 ## Symbols / Convenciones
 - ⚠️- Usage can be seen as a bad practice / El uso puede considerarse una mala práctica.
