@@ -20,6 +20,7 @@
 |--|--|
 |`git config --global user.name "Tu nombre"`| Guarda el nombre del usuario de globalmente, si no se pasa un nombre entre comillas (") retorna el nombre de usuario que esté configurado|
 |`git config --global user.email "Tu email"`|Guarda el correo electrónico globalmente, si no se pasa un email entre comillas (") retorna el email que esté configurado|
+|` git config --global core.editor "code --wait"`|Establece Visual Studio Code como editor para crear commit messages|
 
 ### Configurar conexión SSH con GitHub
 |Comando de git |Descripción|
